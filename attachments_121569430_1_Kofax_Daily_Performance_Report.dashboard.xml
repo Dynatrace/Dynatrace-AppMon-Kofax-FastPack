@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
+<dynatrace version="4.2.0.3280" date="4/18/13 7:51 AM">
+  <dashboardconfig memento.version="4.2.0.3280" icon="com.dynatrace.diagnostics.portlets/icons/transaction.gif" localizationenabled="false" sessiontype="live" locationassource="true" groupname="" authorname="076361" opendrilldowninnewdashboard="false" sessionid="Kofax" modified="1969-12-31T18:00:00-0600" id="0e2d6fab-2a9e-41c6-841a-00c6df912278" revision="00000000-0000-0000-9146-49ff59999828" created="2013-04-18T07:51:59-0500" description="" name="Kofax Daily Performance Report" modifiedbyname="076361" locationascomparesource="false">
+    <reportconfig lines.per.table="100" enabled="true" print.legends="true" orientation="portrait" pagesize="A4" formathtml="com.dynatrace.diagnostics.report.velocity.format.htmlrenderer" optimizeequalcolumns="true" type="PDF" title="ECM-Kofax Daily Performance Report" override="false" levels.per.tree="10" description="" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" print.images="true" />
+    <filter>
+      <criterion completepurepath="true" type="agents" mode="all">
+        <textpattern enabled="true" name="agentname" type="contains" />
+        <textpattern enabled="true" name="agenthost" type="contains" />
+      </criterion>
+      <criterion excludeexternalsubpaths="false" type="api" mode="all" />
+      <criterion type="applications" mode="all" />
+      <criterion showrendering="true" isactive="true" shownetwork="true" showjavascript="true" type="browserpathtype" />
+      <criterion timerenabled="false" pageenabled="false" type="browsersectionfilter">
+        <timername>
+          <stringmatchpattern text="" match="contains" />
+        </timername>
+        <pageurl>
+          <stringmatchpattern text="" match="contains" />
+        </pageurl>
+      </criterion>
+      <criterion type="btm" />
+      <criterion filterinterval="false" intervalend="0" type="dcrumdimension" intervalstart="0" />
+      <criterion isactive="true" analyzeserverpath="true" type="enduserpath" analyzeenduserpath="true" />
+      <criterion completepurepath="true" type="hosts" mode="all" />
+      <criterion severities="" statesmode="all" severitiesmode="all" states="" rulesmode="all" type="incident" />
+      <criterion type="purepaths" mode="all" />
+      <criterion showrendering="true" isactive="false" contenttypegroupsmode="all" javascripttriggersmode="all" shownetwork="true" showjavascript="true" type="riapurepathtype" requestcriterion="ALL" />
+      <criterion includemeasurename="true" includetestname="true" type="tests" teststatus="OK" />
+      <criterion enabled="false" filterbyid="false" type="threads" />
+      <criterion type="timeframe">
+        <timeframe type="Yesterday" />
+      </criterion>
+      <criterion type="visits">
+        <visitidset visitsidsetsize="0" />
+      </criterion>
+      <criterion type="webpage">
+        <textpattern enabled="true" name="timerName" type="contains" />
+        <textpattern enabled="true" name="pageContext" type="contains" />
+      </criterion>
+      <criterion type="webrequest">
+        <filteruripattern>
+          <stringmatchpattern text="" match="contains" />
+        </filteruripattern>
+        <filterquerypattern>
+          <stringmatchpattern text="" match="contains" />
+        </filterquerypattern>
+      </criterion>
+    </filter>
+    <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+    <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" descriptionfontsize="8" nameshow="true" clienttheme="DEFAULT" headertype="DEFAULT" namefontsize="10" descriptionshow="true" autoadjustfontsizes="false" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+    <dashboardlayout>
+      <portletfolder relationtype="LEFT" ratio="0.95" folderid="folder" selectionindex="0" relatedfolderid="DashboardLayout.blankArea" portletconfigorder="9283fbb1-5d97-4b71-b0ce-d2c37c766e1e, 329599c3-3f4e-49ab-a273-6aa4655aa24f">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig treestructuremode="Hierarchy" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="folder" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="Kofax" id="9283fbb1-5d97-4b71-b0ce-d2c37c766e1e" addfilterinfo="false" description="" name="DocReview" typeid="com.dynatrace.diagnostics.portlets.chart.BtHistoricalCompare" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="1" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Yesterday" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <datamodelconfig sortorder="Up" sortcolumn="0" sorttable="0" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,15,12,13,14">
+        <chartsourceconfigurations>
+          <chartsource position="1" scale="0" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Kofax" id="d71da997-1b4f-49af-8788-6c4f74429b40" displayrate="10s" systemid="Kofax" overridesource="false" name="" sourcetype="BUSINESS_TRANSACTION" autoscale="false">
+            <businesstransaction transactionconfigkeyid="DocReview - Delete Page" groupingconstant1="NoSplitting" parentconfigurationid="1b9fa4d7-8d7b-4bb2-958a-5807f1bffa6a">
+              <sessionreference systemid="Kofax" techtypes="2" datastarttime="1366289300257" latestmodification="1366289343000" lastmodifiedby="admin" type="live" />
+              <childsourceconfigs>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" uiunit="ms" groupingvalue="" id="9c2c0b59-2e93-4422-b698-1fd51e9c3f80" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="DocReview - Delete Page" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="DocReview - Delete Page" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="DocReview - Delete Page" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" pctparam="90" colorinheritancemode="parent" aggregationtype="Pct" uiunit="ms" groupingvalue="" id="fa3f1aad-a450-4dc5-a0a2-358346eee4bf" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="DocReview - Delete Page" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="DocReview - Delete Page" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="DocReview - Delete Page" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="ms" groupingvalue="" id="11b36dc1-45f9-4976-9d92-c816c585c999" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="DocReview - Delete Page" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="DocReview - Delete Page" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="DocReview - Delete Page" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="ms" groupingvalue="" id="58546344-a208-417d-9f8a-7dc731d3e31f" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="DocReview - Delete Page" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="DocReview - Delete Page" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="DocReview - Delete Page" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Min" uiunit="ms" groupingvalue="" id="f480ead1-06c0-48fd-a2a3-5ac3fe87a9bc" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="DocReview - Delete Page" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="DocReview - Delete Page" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="DocReview - Delete Page" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+              </childsourceconfigs>
+            </businesstransaction>
+          </chartsource>
+          <chartsource position="3" scale="0" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Kofax" id="ea25a019-8819-4658-98c6-ae3c02762e04" displayrate="10s" systemid="Kofax" overridesource="false" name="" sourcetype="BUSINESS_TRANSACTION" autoscale="false">
+            <businesstransaction transactionconfigkeyid="DocReview - Save Document" groupingconstant1="NoSplitting" parentconfigurationid="fe79226f-1866-42bf-9684-5f26b2ce0697">
+              <sessionreference systemid="Kofax" techtypes="2" datastarttime="1366289300257" latestmodification="1366289343000" lastmodifiedby="admin" type="live" />
+              <childsourceconfigs>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" uiunit="ms" groupingvalue="" id="4188b31f-51fd-4fd9-836b-c3c50259c66a" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="DocReview - Save Document" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="DocReview - Save Document" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="DocReview - Save Document" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" pctparam="90" colorinheritancemode="parent" aggregationtype="Pct" uiunit="ms" groupingvalue="" id="036aa4ce-a54a-4d98-bab4-e2716956f00c" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="DocReview - Save Document" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="DocReview - Save Document" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="DocReview - Save Document" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="ms" groupingvalue="" id="e334ad97-2c22-4b28-80f8-5794f86bf786" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="DocReview - Save Document" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="DocReview - Save Document" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="DocReview - Save Document" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="ms" groupingvalue="" id="c31a4634-05d7-4407-afdb-7df9a5ab1e97" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="DocReview - Save Document" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="DocReview - Save Document" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="DocReview - Save Document" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Min" uiunit="ms" groupingvalue="" id="d9b37282-ff35-4e85-9ff0-64d7ae5ec07f" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="DocReview - Save Document" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="DocReview - Save Document" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="DocReview - Save Document" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+              </childsourceconfigs>
+            </businesstransaction>
+          </chartsource>
+          <chartsource position="2" scale="0" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Kofax" id="de943943-05d0-402d-85a4-9deabf58539f" displayrate="10s" systemid="Kofax" overridesource="false" name="" sourcetype="BUSINESS_TRANSACTION" autoscale="false">
+            <businesstransaction transactionconfigkeyid="DocReview - Open Next Batch" groupingconstant1="NoSplitting" parentconfigurationid="ef75e5f0-3041-45f8-8b8e-7887c023590a">
+              <sessionreference systemid="Kofax" techtypes="2" datastarttime="1366289300257" latestmodification="1366289343000" lastmodifiedby="admin" type="live" />
+              <childsourceconfigs>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" uiunit="ms" groupingvalue="" id="5e8a3156-5fea-4599-b03b-f8ba7af35405" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="DocReview - Open Next Batch" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="DocReview - Open Next Batch" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="DocReview - Open Next Batch" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" pctparam="90" colorinheritancemode="parent" aggregationtype="Pct" uiunit="ms" groupingvalue="" id="f1997589-9529-4746-8376-7b574b36424c" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="DocReview - Open Next Batch" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="DocReview - Open Next Batch" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="DocReview - Open Next Batch" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="ms" groupingvalue="" id="6e0b0f09-ef73-4d44-9538-a093ac2bd25c" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="DocReview - Open Next Batch" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="DocReview - Open Next Batch" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="DocReview - Open Next Batch" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="ms" groupingvalue="" id="4fce0f90-a5b6-4334-80fb-e961073635eb" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="DocReview - Open Next Batch" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="DocReview - Open Next Batch" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="DocReview - Open Next Batch" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Min" uiunit="ms" groupingvalue="" id="c40a9f5f-865d-4699-8a45-3acd8851771b" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="DocReview - Open Next Batch" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="DocReview - Open Next Batch" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="DocReview - Open Next Batch" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+              </childsourceconfigs>
+            </businesstransaction>
+          </chartsource>
+        </chartsourceconfigurations>
+        <columndescriptor id="count" name="Count" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="false" width="65" tooltip="The number of times this Business Transaction occurred" />
+        </columndescriptor>
+        <columndescriptor id="countPerDay" name="Count per day" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="65" tooltip="The number of times this Business Transaction occurred per day" />
+        </columndescriptor>
+        <columndescriptor id="incidents" name="Incidents" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="65" tooltip="The number of Business Transactions which triggered incidents" />
+        </columndescriptor>
+        <columndescriptor id="incidentsPerDay" name="Incidents per day" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="65" tooltip="The number Business Transactions which triggered incidents, normalized to a one-day period" />
+        </columndescriptor>
+        <columndescriptor id="incidentRate" name="Incident rate [%]" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="65" tooltip="The number of Business Transactions which triggered incidents, in relation to the number of times this Business Transaction occurred" />
+        </columndescriptor>
+        <columndescriptor id="violations" name="Violations" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="65" tooltip="The number of violations of result measures of this Business Transaction" />
+        </columndescriptor>
+        <columndescriptor id="violationsPerDay" name="Violations per day" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="65" tooltip="The number of violations of result measures of this Business Transaction per day" />
+        </columndescriptor>
+        <columndescriptor id="violationRate" name="Violations per Business Transaction [%]" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="65" tooltip="The number of violations of result measures of this Business Transaction, in relation to the number of times this Business Transaction occurred" />
+        </columndescriptor>
+        <columndescriptor id="state" name="" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="20" tooltip="The state (ok, warning, error) that has been detected for this Business Transaction" />
+        </columndescriptor>
+        <columndescriptor id="errorPercentage" name="Failed %" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="true" hidden="false" width="65" tooltip="The percentage of errors that has been detected for this Business Transaction" />
+        </columndescriptor>
+        <columndescriptor id="sotw" name="Compare to SpeedoftheWeb" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="180" tooltip="Compare average Page Load Times to benchmark data powered by www.SpeedoftheWeb.org" />
+        </columndescriptor>
+        <columndescriptor name="PurePath Response Time" special="false">
+          <aggregationtype aggregationtypeid="Avg" />
+          <column index="-1" sort="None" forcevisible="false" hidden="false" width="205" />
+        </columndescriptor>
+        <columndescriptor name="PurePath Response Time" special="false">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="Up" forcevisible="false" hidden="false" width="195" />
+        </columndescriptor>
+        <columndescriptor name="PurePath Response Time" special="false">
+          <aggregationtype aggregationtypeid="Pct-90" />
+          <column index="-1" sort="None" forcevisible="false" hidden="false" width="229" />
+        </columndescriptor>
+        <columndescriptor name="PurePath Response Time" special="false">
+          <aggregationtype aggregationtypeid="Min" />
+          <column index="-1" sort="None" forcevisible="false" hidden="false" width="183" />
+        </columndescriptor>
+        <aggregationtype aggregationtypeid="Max" />
+        <aggregationtype aggregationtypeid="Pct-90" />
+        <aggregationtype aggregationtypeid="Avg" />
+        <aggregationtype aggregationtypeid="Min" />
+      </datamodelconfig>
+      <descriptors>
+        <timeframetabledescriptor enabled="false">
+          <timeframe type="Last Week" />
+        </timeframetabledescriptor>
+        <timeframetabledescriptor enabled="false">
+          <timeframe type="Last Month" />
+        </timeframetabledescriptor>
+        <timeframetabledescriptor enabled="false">
+          <timeframe type="Last Year" />
+        </timeframetabledescriptor>
+      </descriptors>
+      <ccontent enabled="both" ratio="0.299" />
+    </portletconfig>
+    <portletconfig treestructuremode="Hierarchy" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="folder" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="Kofax" id="329599c3-3f4e-49ab-a273-6aa4655aa24f" addfilterinfo="false" description="" name="Validation" typeid="com.dynatrace.diagnostics.portlets.chart.BtHistoricalCompare" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Yesterday" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <datamodelconfig sortorder="Up" sortcolumn="0" sorttable="0" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,15,12,13,14">
+        <chartsourceconfigurations>
+          <chartsource position="6" scale="0" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Kofax" id="227ce873-c948-4fd2-8788-ed7240fdd53a" displayrate="10s" systemid="Kofax" overridesource="false" name="" sourcetype="BUSINESS_TRANSACTION" autoscale="false">
+            <businesstransaction transactionconfigkeyid="Validation - Search by Claimant Name" groupingconstant1="NoSplitting" parentconfigurationid="bef3f032-2c5a-4cbb-9e56-ce7f08d979f8">
+              <sessionreference systemid="Kofax" techtypes="2" datastarttime="1366289300257" latestmodification="1366289343000" lastmodifiedby="admin" type="live" />
+              <childsourceconfigs>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" uiunit="ms" groupingvalue="" id="edc18d4e-6b72-490a-b3f0-2361135cb7f0" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Search by Claimant Name" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Search by Claimant Name" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Search by Claimant Name" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="ms" groupingvalue="" id="50fc0274-4f9a-4ac2-8818-d29934fb2690" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Search by Claimant Name" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Search by Claimant Name" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Search by Claimant Name" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" pctparam="90" colorinheritancemode="parent" aggregationtype="Pct" uiunit="ms" groupingvalue="" id="64c11255-8449-4016-b50f-140886b0f955" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Search by Claimant Name" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Search by Claimant Name" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Search by Claimant Name" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="ms" groupingvalue="" id="05240aa3-819e-4a3c-ab3e-8e46ff9a18a9" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Search by Claimant Name" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Search by Claimant Name" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Search by Claimant Name" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Min" uiunit="ms" groupingvalue="" id="50544c51-d321-4dc3-b400-4b359c1ac645" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Search by Claimant Name" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Search by Claimant Name" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Search by Claimant Name" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+              </childsourceconfigs>
+            </businesstransaction>
+          </chartsource>
+          <chartsource position="5" scale="0" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Kofax" id="08aa9db3-4fee-4f75-bc43-5995af2be3a8" displayrate="10s" systemid="Kofax" overridesource="false" name="" sourcetype="BUSINESS_TRANSACTION" autoscale="false">
+            <businesstransaction transactionconfigkeyid="Validation - Search By Claim #" groupingconstant1="NoSplitting" parentconfigurationid="46127635-1a34-466b-aa5a-665604e8498d">
+              <sessionreference systemid="Kofax" techtypes="2" datastarttime="1366289300257" latestmodification="1366289343000" lastmodifiedby="admin" type="live" />
+              <childsourceconfigs>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" uiunit="ms" groupingvalue="" id="4fbe88a6-29d4-42ea-97f6-09ecddfd3c4d" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Search By Claim #" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Search By Claim #" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Search By Claim #" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="ms" groupingvalue="" id="57c728a7-0922-4f53-b7ab-a88d6e5fe078" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Search By Claim #" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Search By Claim #" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Search By Claim #" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" pctparam="90" colorinheritancemode="parent" aggregationtype="Pct" uiunit="ms" groupingvalue="" id="998206c9-524d-4a78-bda2-ee1e7a9fed5e" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Search By Claim #" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Search By Claim #" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Search By Claim #" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="ms" groupingvalue="" id="d0a28b57-c47e-49be-97c5-ab7871f236f1" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Search By Claim #" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Search By Claim #" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Search By Claim #" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Min" uiunit="ms" groupingvalue="" id="d3ce8bae-90c1-4a45-a87c-73209fd60665" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Search By Claim #" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Search By Claim #" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Search By Claim #" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+              </childsourceconfigs>
+            </businesstransaction>
+          </chartsource>
+          <chartsource position="4" scale="0" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Kofax" id="cfc3d475-f015-44d0-8a3b-c0eb5bee1842" displayrate="10s" systemid="Kofax" overridesource="false" name="" sourcetype="BUSINESS_TRANSACTION" autoscale="false">
+            <businesstransaction transactionconfigkeyid="Validation - Save Document" groupingconstant1="NoSplitting" parentconfigurationid="8806a016-ca6f-433d-bd27-cce3fb96fec4">
+              <sessionreference systemid="Kofax" techtypes="2" datastarttime="1366289300257" latestmodification="1366289343000" lastmodifiedby="admin" type="live" />
+              <childsourceconfigs>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" uiunit="ms" groupingvalue="" id="60249d4f-5333-47d7-884e-6fb7eabc4294" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Save Document" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Save Document" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Save Document" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="ms" groupingvalue="" id="1f8a69b1-06e7-40a5-92ff-8e3e8e96ce9c" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Save Document" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Save Document" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Save Document" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" pctparam="90" colorinheritancemode="parent" aggregationtype="Pct" uiunit="ms" groupingvalue="" id="75166946-a55c-4f4c-bf03-bc4582f2623b" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Save Document" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Save Document" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Save Document" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="ms" groupingvalue="" id="87fdab8a-9e18-4a6f-b199-749098971dd2" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Save Document" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Save Document" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Save Document" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Min" uiunit="ms" groupingvalue="" id="184c643f-34bc-4c51-b38c-ea5b49904997" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Save Document" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Save Document" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Save Document" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+              </childsourceconfigs>
+            </businesstransaction>
+          </chartsource>
+          <chartsource position="7" scale="0" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Kofax" id="0414cda2-ea4f-4e5d-a0cd-f7cd3ee69ba1" displayrate="10s" systemid="Kofax" overridesource="false" name="" sourcetype="BUSINESS_TRANSACTION" autoscale="false">
+            <businesstransaction transactionconfigkeyid="Validation - Search By SSN" groupingconstant1="NoSplitting" parentconfigurationid="74ba8bbd-3671-43e1-b5e5-c8138586d767">
+              <sessionreference systemid="Kofax" techtypes="2" datastarttime="1366289300257" latestmodification="1366289343000" lastmodifiedby="admin" type="live" />
+              <childsourceconfigs>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" uiunit="ms" groupingvalue="" id="047e0384-d9c5-4a5b-82be-de78f902534a" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Search By SSN" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Search By SSN" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Search By SSN" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="ms" groupingvalue="" id="0b82d58d-0a5b-42d7-a39f-503b5a707f07" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Search By SSN" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Search By SSN" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Search By SSN" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" pctparam="90" colorinheritancemode="parent" aggregationtype="Pct" uiunit="ms" groupingvalue="" id="86c9746e-55b6-4d05-8c26-2d7918991a0c" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Search By SSN" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Search By SSN" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Search By SSN" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="ms" groupingvalue="" id="5ef8c041-5ca4-4f7f-aeeb-08f9d51e2fef" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Search By SSN" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Search By SSN" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Search By SSN" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Min" uiunit="ms" groupingvalue="" id="ddb11e09-d3b1-4dcf-947d-d92ccd221d9f" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Search By SSN" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Search By SSN" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Search By SSN" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+              </childsourceconfigs>
+            </businesstransaction>
+          </chartsource>
+          <chartsource position="3" scale="0" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Kofax" id="22d8566c-4a8d-438f-a9c1-cdbd2d5c7de4" displayrate="10s" systemid="Kofax" overridesource="false" name="" sourcetype="BUSINESS_TRANSACTION" autoscale="false">
+            <businesstransaction transactionconfigkeyid="Validation - Get User Info" groupingconstant1="NoSplitting" parentconfigurationid="203401d6-111a-49b9-92a4-206ef20d6cd1">
+              <sessionreference systemid="Kofax" techtypes="2" datastarttime="1366289300257" latestmodification="1366289343000" lastmodifiedby="admin" type="live" />
+              <childsourceconfigs>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" uiunit="ms" groupingvalue="" id="47b29e5d-edb6-412c-8c5d-a2bc0711954b" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Get User Info" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Get User Info" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Get User Info" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="ms" groupingvalue="" id="f9f4f355-c2e6-48e5-b586-463fdf857ca5" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Get User Info" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Get User Info" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Get User Info" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" pctparam="90" colorinheritancemode="parent" aggregationtype="Pct" uiunit="ms" groupingvalue="" id="9b8a727a-1020-4668-9b52-b14044aa7d69" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Get User Info" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Get User Info" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Get User Info" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="ms" groupingvalue="" id="ec69efe3-0766-4cc1-a2c7-e34c156001d7" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Get User Info" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Get User Info" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Get User Info" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Min" uiunit="ms" groupingvalue="" id="52f77550-d65b-4711-9ff6-3953dbd00824" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Get User Info" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Get User Info" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Get User Info" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+              </childsourceconfigs>
+            </businesstransaction>
+          </chartsource>
+          <chartsource position="2" scale="0" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Kofax" id="5092c795-eccd-41d3-828b-202f8caf2251" displayrate="10s" systemid="Kofax" overridesource="false" name="" sourcetype="BUSINESS_TRANSACTION" autoscale="false">
+            <businesstransaction transactionconfigkeyid="Validation - Get License Data" groupingconstant1="NoSplitting" parentconfigurationid="1b2a2a27-3f7c-48fd-9eb5-2ec50c7e93f1">
+              <sessionreference systemid="Kofax" techtypes="2" datastarttime="1366289300257" latestmodification="1366289343000" lastmodifiedby="admin" type="live" />
+              <childsourceconfigs>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" uiunit="ms" groupingvalue="" id="9f323745-7556-4b41-a2d3-a6b5ac0bc624" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Get License Data" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Get License Data" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Get License Data" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="ms" groupingvalue="" id="2f6b215d-39f7-4813-8139-bad4c1a8a8dc" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Get License Data" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Get License Data" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Get License Data" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" pctparam="90" colorinheritancemode="parent" aggregationtype="Pct" uiunit="ms" groupingvalue="" id="606adba0-f106-413a-a00b-8a65729a0130" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Get License Data" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Get License Data" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Get License Data" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="ms" groupingvalue="" id="72f0130b-d1ab-4cbc-94e5-5cf969c76eab" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Get License Data" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Get License Data" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Get License Data" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Min" uiunit="ms" groupingvalue="" id="d97de830-802b-4a8a-ac92-0224efa97793" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Get License Data" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Get License Data" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Get License Data" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+              </childsourceconfigs>
+            </businesstransaction>
+          </chartsource>
+          <chartsource position="1" scale="0" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Kofax" id="4d74a86d-6967-4261-94ca-85162a4060ce" displayrate="10s" systemid="Kofax" overridesource="false" name="" sourcetype="BUSINESS_TRANSACTION" autoscale="false">
+            <businesstransaction transactionconfigkeyid="Validation - Check isException" groupingconstant1="NoSplitting" parentconfigurationid="9889f166-48e6-4687-b6ea-36402d45ed86">
+              <sessionreference systemid="Kofax" techtypes="2" datastarttime="1366289300257" latestmodification="1366289343000" lastmodifiedby="admin" type="live" />
+              <childsourceconfigs>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" uiunit="ms" groupingvalue="" id="af287c93-3c66-40ef-bdb7-6aefad2a9010" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Check isException" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Check isException" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Check isException" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="ms" groupingvalue="" id="9114dab9-3d22-44d8-b9c4-b6f631a91aff" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Check isException" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Check isException" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Check isException" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" pctparam="90" colorinheritancemode="parent" aggregationtype="Pct" uiunit="ms" groupingvalue="" id="47a06f22-445c-4648-a0c9-3dc1f81a6728" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Check isException" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Check isException" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Check isException" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="ms" groupingvalue="" id="438a1219-c129-47a7-9808-758cb7e456bc" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Check isException" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Check isException" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Check isException" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Min" uiunit="ms" groupingvalue="" id="776cc8ab-065e-43ac-818a-ec106934ce35" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Check isException" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Check isException" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Check isException" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+              </childsourceconfigs>
+            </businesstransaction>
+          </chartsource>
+          <chartsource position="8" scale="0" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Kofax" id="4d0d37ca-f399-4d0e-8da4-98f904fff887" displayrate="10s" systemid="Kofax" overridesource="false" name="" sourcetype="BUSINESS_TRANSACTION" autoscale="false">
+            <businesstransaction transactionconfigkeyid="Validation - Show Next Invalid Document" groupingconstant1="NoSplitting" parentconfigurationid="0871a4de-c130-487f-a363-e1f1b9feb5eb">
+              <sessionreference systemid="Kofax" techtypes="2" datastarttime="1366289300257" latestmodification="1366289343000" lastmodifiedby="admin" type="live" />
+              <childsourceconfigs>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" uiunit="ms" groupingvalue="" id="b80b981f-6b1c-4465-ba92-931054447ffe" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Show Next Invalid Document" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Show Next Invalid Document" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Show Next Invalid Document" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="ms" groupingvalue="" id="79a4970d-8d75-4f50-a8a7-33d418aae80d" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Show Next Invalid Document" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Show Next Invalid Document" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Show Next Invalid Document" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" pctparam="90" colorinheritancemode="parent" aggregationtype="Pct" uiunit="ms" groupingvalue="" id="d513ba7b-c4d0-48ac-9dbc-9138f3b67295" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Show Next Invalid Document" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Show Next Invalid Document" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Show Next Invalid Document" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="ms" groupingvalue="" id="a1cafc92-66c1-4ef1-a818-0543a8a8b831" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Show Next Invalid Document" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Show Next Invalid Document" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Show Next Invalid Document" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="parent" aggregationtype="Min" uiunit="ms" groupingvalue="" id="bebfe907-7c1c-4380-b76a-c27568dd63e5" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Validation - Show Next Invalid Document" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Kofax" displayrate="10s" systemid="Kofax" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+                  <lightweightuniquemeasureidentifier keyid="Validation - Show Next Invalid Document" metricgroupkey="Business Transaction Results" collector="" systemid="Kofax" application="" agenthost="" parentkeyid="Validation - Show Next Invalid Document" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+                  <displaysourceinfo />
+                </chartsource>
+              </childsourceconfigs>
+            </businesstransaction>
+          </chartsource>
+        </chartsourceconfigurations>
+        <columndescriptor id="count" name="Count" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="false" width="65" tooltip="The number of times this Business Transaction occurred" />
+        </columndescriptor>
+        <columndescriptor id="countPerDay" name="Count per day" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="65" tooltip="The number of times this Business Transaction occurred per day" />
+        </columndescriptor>
+        <columndescriptor id="incidents" name="Incidents" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="65" tooltip="The number of Business Transactions which triggered incidents" />
+        </columndescriptor>
+        <columndescriptor id="incidentsPerDay" name="Incidents per day" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="65" tooltip="The number Business Transactions which triggered incidents, normalized to a one-day period" />
+        </columndescriptor>
+        <columndescriptor id="incidentRate" name="Incident rate [%]" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="65" tooltip="The number of Business Transactions which triggered incidents, in relation to the number of times this Business Transaction occurred" />
+        </columndescriptor>
+        <columndescriptor id="violations" name="Violations" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="65" tooltip="The number of violations of result measures of this Business Transaction" />
+        </columndescriptor>
+        <columndescriptor id="violationsPerDay" name="Violations per day" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="65" tooltip="The number of violations of result measures of this Business Transaction per day" />
+        </columndescriptor>
+        <columndescriptor id="violationRate" name="Violations per Business Transaction [%]" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="65" tooltip="The number of violations of result measures of this Business Transaction, in relation to the number of times this Business Transaction occurred" />
+        </columndescriptor>
+        <columndescriptor id="state" name="" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="20" tooltip="The state (ok, warning, error) that has been detected for this Business Transaction" />
+        </columndescriptor>
+        <columndescriptor id="errorPercentage" name="Failed %" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="true" hidden="false" width="65" tooltip="The percentage of errors that has been detected for this Business Transaction" />
+        </columndescriptor>
+        <columndescriptor id="sotw" name="Compare to SpeedoftheWeb" special="true">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="None" forcevisible="false" hidden="true" width="180" tooltip="Compare average Page Load Times to benchmark data powered by www.SpeedoftheWeb.org" />
+        </columndescriptor>
+        <columndescriptor name="PurePath Response Time" special="false">
+          <aggregationtype aggregationtypeid="Avg" />
+          <column index="-1" sort="None" forcevisible="false" hidden="false" width="205" />
+        </columndescriptor>
+        <columndescriptor name="PurePath Response Time" special="false">
+          <aggregationtype aggregationtypeid="Max" />
+          <column index="-1" sort="Up" forcevisible="false" hidden="false" width="195" />
+        </columndescriptor>
+        <columndescriptor name="PurePath Response Time" special="false">
+          <aggregationtype aggregationtypeid="Pct-90" />
+          <column index="-1" sort="None" forcevisible="false" hidden="false" width="229" />
+        </columndescriptor>
+        <columndescriptor name="PurePath Response Time" special="false">
+          <aggregationtype aggregationtypeid="Min" />
+          <column index="-1" sort="None" forcevisible="false" hidden="false" width="183" />
+        </columndescriptor>
+        <aggregationtype aggregationtypeid="Pct-90" />
+        <aggregationtype aggregationtypeid="Max" />
+        <aggregationtype aggregationtypeid="Avg" />
+        <aggregationtype aggregationtypeid="Min" />
+      </datamodelconfig>
+      <descriptors>
+        <timeframetabledescriptor enabled="false">
+          <timeframe type="Last Week" />
+        </timeframetabledescriptor>
+        <timeframetabledescriptor enabled="false">
+          <timeframe type="Last Month" />
+        </timeframetabledescriptor>
+        <timeframetabledescriptor enabled="false">
+          <timeframe type="Last Year" />
+        </timeframetabledescriptor>
+      </descriptors>
+      <ccontent enabled="both" ratio="0.303" />
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>
+
